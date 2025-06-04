@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your New Favourite CSS Named Color</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/rainbow-css-color-cafe.css" media="screen">
+</head>
+
+<body>
+  <main>
+    <h1>Find Your New Favourite CSS Named Color</h1>
+    <css-color-names>
+      <form name="css-colors" action="/" method="get">
+        <fieldset>
+          <legend class="visually-hidden">How do you want to filter?</legend>
+          <label class="options-wrapper" for="live">
+            <input type="radio" id="live" name="filter" value="live" checked>
+            Filter as I type
+          </label>
+          <label class="options-wrapper" for="submit">
+            <input type="radio" id="submit" name="filter" value="submit">
+            Filter on submit
+          </label>
+        </fieldset>
+        <label class="visually-hidden" for="color-input">Type a color name:</label>
+        <div class="filter-group">
+          <input type="text" id="color-input" name="color">
+          <button class="submit-button" type="submit" hidden>Filter</button>
+        </div>
+      </form>
+      <p aria-live="assertive" id="total-count"></p>
+    </css-color-names>
+  </main>
+
+  <footer>
+    <p class="made-by">Made with love and web components by <a href="https://github.com/schalkneethling">Schalk
+        Neethling</a></p>
+  </footer>
+  <script src="js/rainbow-css-color-cafe.js" type="module"></script>
+</body>
+
+</html>

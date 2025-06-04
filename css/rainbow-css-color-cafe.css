@@ -1,0 +1,138 @@
+@font-face {
+  font-display: swap;
+  font-family: HennyPenny;
+  src:
+    url("/assets/HennyPenny-Regular.woff") format("woff"),
+    url("/assets/HennyPenny-Regular.woff2") format("woff2");
+}
+
+body {
+  background-color: lavender;
+  font:
+    100% / 1.5 system-ui,
+    sans-serif;
+  margin-block: 5vw 2vw;
+  margin-inline: 10vw;
+  min-height: 100vh;
+}
+
+a {
+  color: #ebffff;
+}
+
+h1 {
+  color: rebeccapurple;
+  font-family: HennyPenny, cursive;
+  font-size: clamp(1rem, 6.5vw, 4rem);
+  margin: 0;
+  text-wrap: balance;
+}
+
+fieldset {
+  border: 0;
+  display: flex;
+  gap: 1rem;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+
+.options-wrapper {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5rem;
+
+  input {
+    margin: 0;
+  }
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+
+  [type="text"] {
+    border: 0.125rem solid rebeccapurple;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+
+  .submit-button {
+    background-color: rebeccapurple;
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
+    border: 0.125rem solid hsl(from rebeccapurple h s 25%);
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
+    color: hsl(from rebeccapurple h s 95%);
+    cursor: pointer;
+    font-size: 1rem;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+
+    &:hover,
+    &:focus-visible {
+      /* stylelint-disable-next-line declaration-property-value-no-unknown */
+      outline: 0.125rem solid hsl(from rebeccapurple h s 25%);
+      outline-offset: 0.125rem;
+    }
+  }
+}
+
+.color-names {
+  background-color: hsl(0deg 0% 100% / 85%);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  margin-block: 2rem;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+
+  li {
+    background-color: var(--color-name);
+    border-block-end: 0.125rem solid hsl(from var(--color-name) h s 25%);
+    flex: 1 1 15rem;
+    outline: 0.125rem solid hsl(from var(--color-name) h s 25%);
+    outline-offset: 0.125rem;
+    padding: 1.5rem;
+    position: relative;
+    text-align: center;
+
+    .copy-color-name {
+      background-color: white;
+      border: 0.125rem solid hsl(from var(--color-name) h s 25%);
+      color: hsl(from var(--color-name) h s 15%);
+      cursor: pointer;
+      font-size: 1rem;
+      min-inline-size: 40%;
+      padding-block: 0.2rem;
+
+      &:hover,
+      &:focus-visible {
+        outline: 0.125rem solid hsl(from var(--color-name) h s 10%);
+        outline-offset: 0.125rem;
+      }
+    }
+  }
+}
+
+.made-by {
+  background-color: teal;
+  border-radius: 1rem;
+  color: #ebffff;
+  margin: 0 auto;
+  max-width: max-content;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+/* https://www.tpgi.com/the-anatomy-of-visually-hidden/ */
+.visually-hidden {
+  block-size: 1px;
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}

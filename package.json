@@ -1,0 +1,35 @@
+{
+  "name": "rainbow-css-color-cafe",
+  "version": "1.0.0",
+  "description": "A little web app to help you find your next favorite named CSS color - with love and web components",
+  "main": "index.js",
+  "scripts": {
+    "prettier:lint": "prettier .",
+    "prettier:format": "prettier --write .",
+    "lint:eslint": "eslint .",
+    "lint:css": "stylelint **/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schalkneethling/rainbow-css-color-cafe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schalkneethling/rainbow-css-color-cafe/issues"
+  },
+  "homepage": "https://github.com/schalkneethling/rainbow-css-color-cafe#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@html-eslint/eslint-plugin": "^0.41.0",
+    "@html-eslint/parser": "^0.41.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.20.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-order": "^7.0.0"
+  }
+}
